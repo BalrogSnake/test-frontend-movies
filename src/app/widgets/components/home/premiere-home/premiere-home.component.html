@@ -1,0 +1,10 @@
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let mov of movies.data; let i = index">
+        <div class="picsum-img-wrapper d-flex justify-content-center">
+            <img [src]="arrayLinks[i]" alt="Random first slide" style="width: 80%;">
+        </div>
+        <div class="carousel-caption">
+            <h4>{{movies.data[i].title}}</h4>
+        </div>
+    </ng-template>
+</ngb-carousel>

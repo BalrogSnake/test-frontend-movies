@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+    <div *ngFor="let mov of movies.data; let i = index">
+        <button type="button" class="btn" (click)="detallePelicula(mov, movies.imageBaseUrl)">
+            <div class="card d-flex justify-content-center" style="width: 15rem;">
+                <img src="{{movies.imageBaseUrl}}{{movies.data[i].backdrop_path}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-center">{{movies.data[i].title}}</h5>
+                </div>
+            </div>
+        </button>
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+<div class="container">
+    <br>
+    <div class="titulos">
+        <h1>{{movie.title}}</h1>
+    </div>
+    <div>
+        <img src="{{linkImage}}{{movie.backdrop_path}}" alt="" style="width: 100%;">
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="{{linkImage}}{{movie.poster_path}}" alt="" style="width: 90%;">
+        </div>
+        <br>
+        <div class="col-sm-9 card" style="width: 100%;">
+            <br>
+            <div>
+                {{movie.overview}}
+            </div>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="titulos">
+            <h2>REPARTO</h2>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div *ngFor="let actor of cast.data">
+                <div style="padding: 18px;">
+                    <div class="card d-flex justify-content-center" style="width: 15rem;">
+                        <img src="{{cast.imageBaseUrl}}{{actor.profile_path}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex justify-content-center">{{actor.name}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
